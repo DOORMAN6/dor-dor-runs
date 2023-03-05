@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float moveSpeed = 5;
-    public float leftRightSpeed = 4;
+    public float moveSpeed = 10;
+    public float leftRightSpeed = 6;
     static public bool canMove = false;
  
     void Update()
@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviour
             {
                 if (this.gameObject.transform.position.x < LevelBoundary.rightSide)
                 {
-                    transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -1);
+                    transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -2);
                 }
             }
         }

@@ -7,7 +7,6 @@ public class EndRunSequence : MonoBehaviour
     public GameObject liveCoins;
     public GameObject liveDis;
     public GameObject endScreen;
-    public GameObject fadeOut;
     void Start()
     {
         StartCoroutine(EndSequence());
@@ -19,7 +18,7 @@ public class EndRunSequence : MonoBehaviour
         liveDis.SetActive(false);
         endScreen.SetActive(true);
         yield return new WaitForSeconds(5);
-        fadeOut.SetActive(true);
+        
     }
    
 }

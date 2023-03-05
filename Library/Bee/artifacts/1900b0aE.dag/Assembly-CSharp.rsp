@@ -371,6 +371,7 @@
 "Assets/scripts/Collectables/LevelDistance.cs"
 "Assets/scripts/Collectables/RotateObj.cs"
 "Assets/scripts/Environment/EndSequence.cs"
+"Assets/scripts/Environment/GenerateLevel.cs"
 "Assets/scripts/Environment/LevelBoundary.cs"
 "Assets/scripts/Environment/LevelStarter.cs"
 "Assets/scripts/Environment/ObstacleCollision.cs"
