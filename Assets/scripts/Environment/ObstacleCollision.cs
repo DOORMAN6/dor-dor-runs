@@ -7,7 +7,7 @@ public class ObstacleCollision : MonoBehaviour
     public GameObject Player;
     public GameObject charModel;
     public AudioSource crashThud;
-    public GameObject levelControl;
+    public GameObject levelcontrol;
     
 
     void OnTriggerEnter(Collider other)
@@ -16,8 +16,8 @@ public class ObstacleCollision : MonoBehaviour
         Player.GetComponent<PlayerMove>().enabled = false;
         charModel.GetComponent<Animator>().Play("Stumble Backwards");
         crashThud.Play();
-        levelControl.GetComponent<LevelDistance>().enabled = false;
-        levelControl.GetComponent<EndRunSequence>().enabled = true;
+        levelcontrol.GetComponent<LevelDistance>().enabled = false;
+        levelcontrol.GetComponent<EndRunSequence>().enabled = true;
     }
 
 }
