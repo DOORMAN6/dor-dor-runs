@@ -7,17 +7,20 @@ public class ObstacleCollision : MonoBehaviour
     public GameObject Player;
     public GameObject charModel;
     public AudioSource crashThud;
-    public GameObject levelcontrol;
+    public GameObject Levelcontrol;
     
 
     void OnTriggerEnter(Collider other)
     {
+        Levelcontrol.GetComponent<LevelDistance>().enabled = false;
+        Levelcontrol.GetComponent<EndRunSequence>().enabled = true;
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         Player.GetComponent<PlayerMove>().enabled = false;
         charModel.GetComponent<Animator>().Play("Stumble Backwards");
         crashThud.Play();
-        levelcontrol.GetComponent<LevelDistance>().enabled = false;
-        levelcontrol.GetComponent<EndRunSequence>().enabled = true;
+        //Levelcontrol.GetComponent<LevelDistance>().enabled = false;
+       // Levelcontrol.GetComponent<EndRunSequence>().enabled = false;
+      
     }
 
 }
