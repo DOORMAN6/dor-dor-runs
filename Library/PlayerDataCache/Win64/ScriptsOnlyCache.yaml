@@ -3,9 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CollectCoin
     - CollectableControl
+    - Destroyer
+    - EndRunSequence
     - LevelBoundary
     - LevelDistance
     - LevelStarter
+    - MainMenuFunction
+    - NewBehaviourScript
     - ObstacleCollision
     - PlayerMove
     - RotateObj
@@ -17,6 +21,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -29,11 +39,15 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.ImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   serializedClasses:
@@ -51,19 +65,129 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
-  methodsToPreserve: []
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuFunction
+    methodName: PlayGame
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/DesertRnLvl.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 2132}
+    - Class: 114
+      Script: {instanceID: 2234}
+    - Class: 114
+      Script: {instanceID: 2266}
+    - Class: 114
+      Script: {instanceID: 2340}
+    - Class: 114
+      Script: {instanceID: 2656}
+    - Class: 114
+      Script: {instanceID: 2884}
+    - Class: 114
+      Script: {instanceID: 3008}
+    - Class: 114
+      Script: {instanceID: 4706}
+    - Class: 114
+      Script: {instanceID: 5020}
+    - Class: 114
+      Script: {instanceID: 5298}
+    - Class: 114
+      Script: {instanceID: 5636}
+    - Class: 114
+      Script: {instanceID: 5850}
+    - Class: 114
+      Script: {instanceID: 5974}
+    - Class: 114
+      Script: {instanceID: 6480}
+    - Class: 114
+      Script: {instanceID: 6936}
+    - Class: 114
+      Script: {instanceID: 7542}
+    - Class: 114
+      Script: {instanceID: 106978}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 143
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/main level.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -86,8 +210,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -96,63 +218,49 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2132}
+      Script: {instanceID: 1532}
     - Class: 114
       Script: {instanceID: 2210}
-    - Class: 114
-      Script: {instanceID: 2234}
     - Class: 114
       Script: {instanceID: 2266}
     - Class: 114
       Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 2654}
+      Script: {instanceID: 2458}
     - Class: 114
-      Script: {instanceID: 2882}
+      Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 4274}
+      Script: {instanceID: 3194}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 4160}
     - Class: 114
-      Script: {instanceID: 4702}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 4556}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 4706}
     - Class: 114
-      Script: {instanceID: 5348}
+      Script: {instanceID: 5352}
     - Class: 114
-      Script: {instanceID: 5632}
+      Script: {instanceID: 5850}
     - Class: 114
-      Script: {instanceID: 5846}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 5970}
+      Script: {instanceID: 6132}
     - Class: 114
-      Script: {instanceID: 6476}
-    - Class: 114
-      Script: {instanceID: 7536}
-    - Class: 114
-      Script: {instanceID: 24432}
+      Script: {instanceID: 6480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 136
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -263,7 +371,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerUpMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d6084670ceff572560c9d2ddceba52a9
+      Hash: 12d7781a64f8e9e6c1e00a3acb5e799d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMove
@@ -291,6 +399,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenuFunction
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -399,6 +513,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 7fdab7b7770c8914d8aa15dc4ab66fc9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EndRunSequence
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -677,7 +797,7 @@ ScriptsOnlyBuild:
     className: TextConsoleSimulator
   - hash:
       serializedVersion: 2
-      Hash: f902d34e14e72dfb9f8ce40c12007dda
+      Hash: a3699ce1157242c61e2efbb3d4012662
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ObstacleCollision
@@ -731,7 +851,7 @@ ScriptsOnlyBuild:
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: c967e7dfd87500b1238ad156325e6526
+      Hash: cf8264824c985044a2e33961fc4a148f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LevelDistance
@@ -1007,6 +1127,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 3c6289ea0e8f140174d03399f3470a9c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NewBehaviourScript
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1115,7 +1241,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9c9276ddcd5038eaa10d95873d20eff7
+      Hash: 68052fe83ab8cdfc6c51d0fdc91474de
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CollectableControl
@@ -1239,7 +1365,44 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 8e943731a24b96a8b98ee46c7fc5f65b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Destroyer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DoorAction
+  - hash:
+      serializedVersion: 2
+      Hash: 6dd3438c753953d04fed8a33ff7b579e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: evelator_controll
+  - hash:
+      serializedVersion: 2
+      Hash: c24f82d04642ff5a94f47467fa292678
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Fix_elevator_fall
+  - hash:
+      serializedVersion: 2
+      Hash: 97e00adc59d9817e13074d9c4976cc65
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: pass_on_parent
+  - hash:
+      serializedVersion: 2
+      Hash: 9a3cb00648226b5f76fad36830671920
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Door
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: D:/game 1/build/game 1.exe
+  - Assets/Scenes/main level.unity
+  - Assets/Scenes/DesertRnLvl.unity
+  playerPath: D:/dor dor runs/dor-dor-runs/dor dor runs game play/game 1.exe
