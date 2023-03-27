@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     public bool isJumping = false;
     public bool comingDown = false;
     public GameObject playerObject;
+    public float speedIncrement = 0.0000000000000000000000000000000000000000000000000000001f;
+    public float maximumSpeed = 50f;
 
     void Update()
     {
@@ -52,6 +54,8 @@ public class PlayerMove : MonoBehaviour
                 transform.Translate(Vector3.up * Time.deltaTime * -3, Space.World);
             }
         }
+        moveSpeed += speedIncrement;
+        if (moveSpeed >= maximumSpeed) moveSpeed = maximumSpeed;
     }
     IEnumerator JumpSequence()
     {
